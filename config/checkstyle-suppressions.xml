@@ -1,0 +1,29 @@
+<!DOCTYPE suppressions PUBLIC
+        "-//Checkstyle//DTD SuppressionFilter Configuration 1.0//EN"
+        "https://checkstyle.org/dtds/suppressions_1_0.dtd">
+
+<suppressions>
+    <suppress checks=".*" files="[\\/]demo[\\/].*"/>
+    
+    <!-- Intentional style breaks -->
+    <suppress checks="ConstantName" files="ParseUtil\.java" lines="115-135"/>
+    <suppress checks="VisibilityModifier" files="SmcUtil\.java"/>
+    <suppress checks="VisibilityModifier" files="WmiQueryHandler\.*" lines="63,66"/>
+    <suppress checks="VisibilityModifier" files="Memoizer\.*" lines="76-78"/>
+
+    <!-- JNA convention  -->
+    <suppress checks="InterfaceIsType" files="[\\/]jna[\\/].*"/>
+    <suppress checks="VisibilityModifier" files="[\\/]jna[\\/].*"/>
+
+    <suppress checks="ConstantName" files="[\\/]jna[\\/].*"/>
+    <suppress checks="MemberName" files="[\\/]jna[\\/].*"/>
+    <suppress checks="MethodName" files="[\\/]jna[\\/].*"/>
+    <suppress checks="ParameterName" files="[\\/]jna[\\/].*"/>
+    <suppress checks="TypeName" files="[\\/]jna[\\/].*"/>
+
+    <!-- Imports for classes linked in javadocs -->
+    <suppress checks="UnusedImports" files="(CentralProcessor|OSDesktopWindow|OSProcess)\.java"/>
+    <!-- Test files -->
+    <suppress checks="(JavadocPackage|MemberName|ConstantName|StaticVariableName)" files="(.*Test|TestConstants)\.java"/>
+    <suppress checks="(ConstantName|VisibilityModifier)" files="SystemInfoTest\.java"/>
+</suppressions>
